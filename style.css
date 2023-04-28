@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Chivo+Mono&family=Montserrat&family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&family=Sono&family=Space+Mono&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); */
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF85F;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+button {
+    background-color: #30DDCE;
+    color: #fff;
+    border: 1px #30DDCE solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+button:focus{
+    outline: transparent;
+}
+
+button .circle {
+    position: absolute;
+    background-color: #FFF85F;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    /* This puts the circle in the middle and an animation where it scales up and disappears.
+    */
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out; 
+}
+
+@keyframes scale {
+    to {
+    transform: translate(-50%, -50%) scale(1); /* <-- 3 in ariginal */
+    opacity: 0;
+    }
+}
+
+/* 
+<<--- @KEYFRAMES --->>
+https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
+
+/* 
+My colors: 
+#30DDCE (Light green)
+
+#FFF85F (Yellow)
+rgb(255,248,95)
+
+#2A325B (Navy blue)
+*/
